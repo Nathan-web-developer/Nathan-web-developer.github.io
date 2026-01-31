@@ -10,7 +10,7 @@
 
 body{
     font-family: 'Poppins', Arial, sans-serif;
-    background-image: url('premium-bg.jpg'); /* Cafe-style hero image */
+    background-image: url('premium-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,17 +18,16 @@ body{
     position: relative;
 }
 
-/* Dark overlay for readability */
+/* Dark overlay */
 body::before{
     content:"";
     position: fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0.55); /* slightly darker overlay for cafe vibe */
+    inset:0;
+    background: rgba(0,0,0,0.55);
     z-index: -1;
 }
 
-/* NAVIGATION */
+/* NAV */
 nav{
     position: sticky;
     top:0;
@@ -42,11 +41,8 @@ nav a{
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
-nav a:hover{
-    color: #ffcc00;
-}
+nav a:hover{color:#ffcc00;}
 
 /* HEADER */
 header{
@@ -57,12 +53,10 @@ header{
 header h1{
     font-size: 50px;
     color: #ffcc00;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 header p{
     font-size: 22px;
     margin-top: 15px;
-    line-height: 1.6;
 }
 
 /* SECTIONS */
@@ -72,7 +66,7 @@ section{
     padding: 30px;
     border-radius: 12px;
     text-align: center;
-    background: rgba(255,255,255,0.05); /* subtle background */
+    background: rgba(255,255,255,0.05);
 }
 
 /* FEATURES */
@@ -88,16 +82,13 @@ section{
     padding:25px;
     width: 250px;
     border-radius:15px;
-    transition:0.4s;
-    cursor:pointer;
     font-weight:bold;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    transition:0.4s;
 }
 .features .card:hover{
     transform: scale(1.1);
     background:#0099ff;
     color:#fff;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
 }
 
 /* GALLERY */
@@ -111,12 +102,16 @@ section{
     width: 300px;
     border-radius: 12px;
     transition: 0.5s;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 .gallery img:hover{
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0 10px 25px rgba(255,255,0,0.5);
+    transform: scale(1.05);
+}
+
+/* MAP */
+#map iframe{
+    margin-top:20px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
 /* CONTACT */
@@ -129,16 +124,10 @@ section{
 footer{
     text-align: center;
     background: rgba(0,0,0,0.9);
-    color: #fff;
     padding: 20px;
 }
 
-/* SMOOTH SCROLL */
-html{
-  scroll-behavior: smooth;
-}
-
-/* FADE IN ANIMATION */
+/* ANIMATION */
 @keyframes fadeIn{
     from{opacity:0; transform: translateY(40px);}
     to{opacity:1; transform: translateY(0);}
@@ -147,13 +136,11 @@ html{
 /* RESPONSIVE */
 @media(max-width:900px){
     header h1{font-size:42px;}
-    header p{font-size:18px;}
-    .features .card, .gallery img{
-        width:80%;
-    }
+    .features .card, .gallery img{width:80%;}
 }
 </style>
 </head>
+
 <body>
 
 <nav>
@@ -165,37 +152,47 @@ html{
 
 <header>
     <h1>Premium Cafe Website Package</h1>
-    <p>For cafes and restaurants that want a stunning online presence.<br><b>💰8000 Birr</b></p>
+    <p>For cafes that want a strong online presence<br><b>💰 8000 Birr</b></p>
 </header>
 
 <section id="features">
     <h2>Premium Features</h2>
     <div class="features">
-        <div class="card">Fully Responsive Design</div>
+        <div class="card">Responsive Design</div>
         <div class="card">SEO Optimized</div>
         <div class="card">Interactive Menu</div>
-        <div class="card">Gallery & Photo Showcase</div>
-        <div class="card">Contact Form & Online Reservations</div>
-        <div class="card">Fast Loading & Security</div>
-        <div class="card">Social Media Integration</div>
-        <div class="card">Customer Testimonials</div>
+        <div class="card">Photo Gallery</div>
+        <div class="card">Online Reservations</div>
+        <div class="card">Fast Loading</div>
+        <div class="card">Social Media Links</div>
+        <div class="card">Customer Reviews</div>
     </div>
 </section>
 
 <section id="gallery">
     <h2>Cafe Gallery</h2>
     <div class="gallery">
-        <img src="coffee1.jpg" alt="Cafe Coffee">
-        <img src="coffee2.jpg" alt="Cafe Interior">
-        <img src="coffee3.jpg" alt="Cafe Desserts">
-        <img src="coffee4.jpg" alt="Cafe Drinks">
+        <img src="coffee1.jpg">
+        <img src="coffee2.jpg">
+        <img src="coffee3.jpg">
+        <img src="coffee4.jpg">
     </div>
+</section>
+
+<section id="map">
+    <h2>Business Location (Sample)</h2>
+    <iframe 
+        src="https://www.google.com/maps?q=Adama%20Ethiopia&output=embed"
+        width="100%"
+        height="400"
+        loading="lazy">
+    </iframe>
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
     <p>📞 +251 900 000 000</p>
-    <p>📧 Cafe.business@gmail.com</p>
+    <p>📧 cafe.business@gmail.com</p>
 </section>
 
 <footer>
