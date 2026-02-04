@@ -3,140 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Cafe Package</title>
+<title>Premium Cafe Website Package</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family: 'Poppins', Arial, sans-serif;
-    background-image: url('premium-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    position: relative;
+    font-family:'Poppins',Arial,sans-serif;
+    background:url('premium-bg.jpg') center/cover no-repeat fixed;
+    color:#fff;
+    position:relative;
+    line-height:1.6;
 }
 
-/* Dark overlay */
+/* Overlay */
 body::before{
     content:"";
-    position: fixed;
+    position:fixed;
     inset:0;
-    background: rgba(0,0,0,0.55);
-    z-index: -1;
+    background:rgba(0,0,0,0.65);
+    z-index:-1;
 }
 
 /* NAV */
 nav{
-    position: sticky;
+    position:sticky;
     top:0;
-    background: rgba(0,0,0,0.85);
-    padding: 15px;
-    text-align: center;
-    z-index: 10;
+    background:rgba(0,0,0,0.9);
+    padding:15px;
+    text-align:center;
+    z-index:10;
 }
 nav a{
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+    color:#fff;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:600;
 }
-nav a:hover{color:#ffcc00;}
+nav a:hover{color:#ffcc00}
 
-/* HEADER */
+/* HERO */
 header{
-    text-align: center;
-    padding: 120px 20px;
-    animation: fadeIn 1.5s ease-in-out;
+    text-align:center;
+    padding:140px 20px;
+    animation:fadeIn 1.2s ease;
 }
 header h1{
-    font-size: 50px;
-    color: #ffcc00;
+    font-size:54px;
+    color:#ffcc00;
 }
 header p{
-    font-size: 22px;
-    margin-top: 15px;
+    font-size:22px;
+    margin-top:18px;
+}
+.price{
+    font-size:30px;
+    font-weight:700;
+    margin-top:20px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    background: rgba(255,255,255,0.05);
+    max-width:1200px;
+    margin:60px auto;
+    padding:45px 30px;
+    text-align:center;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border-radius:18px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.6);
+}
+section h2{
+    font-size:36px;
+    color:#ffcc00;
+    margin-bottom:35px;
 }
 
 /* FEATURES */
 .features{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:22px;
 }
 .features .card{
-    background:#ffcc00;
-    color:#333;
-    padding:25px;
-    width: 250px;
-    border-radius:15px;
-    font-weight:bold;
-    transition:0.4s;
+    width:260px;
+    padding:26px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#ffcc00,#ffdd77);
+    color:#111;
+    font-weight:600;
+    transition:.4s;
+    box-shadow:0 18px 45px rgba(0,0,0,0.5);
 }
 .features .card:hover{
-    transform: scale(1.1);
-    background:#0099ff;
-    color:#fff;
+    transform:translateY(-10px) scale(1.05);
 }
 
 /* GALLERY */
 .gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:22px;
 }
 .gallery img{
-    width: 300px;
-    border-radius: 12px;
-    transition: 0.5s;
+    width:300px;
+    border-radius:16px;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 .gallery img:hover{
-    transform: scale(1.05);
+    transform:scale(1.08);
 }
 
 /* MAP */
 #map iframe{
     margin-top:20px;
-    border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    border-radius:16px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
 }
 
-/* CONTACT */
-#contact p{
-    font-size: 20px;
-    margin: 10px 0;
+/* CTA */
+.cta{
+    display:inline-block;
+    margin-top:35px;
+    padding:16px 44px;
+    background:linear-gradient(135deg,#ffcc00,#ff9900);
+    color:#111;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:40px;
+    box-shadow:0 18px 45px rgba(0,0,0,0.6);
+    transition:.3s;
+}
+.cta:hover{
+    transform:scale(1.1);
+}
+
+/* WHATSAPP */
+.whatsapp{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 36px;
+    background:#25D366;
+    color:#fff;
+    font-weight:600;
+    text-decoration:none;
+    border-radius:40px;
+}
+.whatsapp:hover{
+    background:#1ebe5d;
 }
 
 /* FOOTER */
 footer{
-    text-align: center;
-    background: rgba(0,0,0,0.9);
-    padding: 20px;
+    background:rgba(0,0,0,0.9);
+    text-align:center;
+    padding:20px;
+    font-size:14px;
 }
 
 /* ANIMATION */
 @keyframes fadeIn{
-    from{opacity:0; transform: translateY(40px);}
-    to{opacity:1; transform: translateY(0);}
+    from{opacity:0;transform:translateY(40px)}
+    to{opacity:1;transform:none}
 }
 
 /* RESPONSIVE */
 @media(max-width:900px){
-    header h1{font-size:42px;}
-    .features .card, .gallery img{width:80%;}
+    header h1{font-size:40px}
+    header p{font-size:18px}
+    .features .card,.gallery img{width:90%}
 }
 </style>
 </head>
@@ -152,25 +190,28 @@ footer{
 
 <header>
     <h1>Premium Cafe Website Package</h1>
-    <p>For cafes that want a strong online presence<br><b>💰 8000 Birr</b></p>
+    <p>For cafes that want a powerful and professional online presence</p>
+    <div class="price">💰 8000 Birr</div>
 </header>
 
-<section id="features">
+<section>
     <h2>Premium Features</h2>
     <div class="features">
-        <div class="card">Responsive Design</div>
-        <div class="card">SEO Optimized</div>
-        <div class="card">Interactive Menu</div>
-        <div class="card">Photo Gallery</div>
+        <div class="card">Luxury Design & Animations</div>
+        <div class="card">Advanced SEO Optimization</div>
+        <div class="card">Interactive Menu System</div>
+        <div class="card">Photo & Video Gallery</div>
         <div class="card">Online Reservations</div>
-        <div class="card">Fast Loading</div>
-        <div class="card">Social Media Links</div>
-        <div class="card">Customer Reviews</div>
+        <div class="card">Customer Reviews Section</div>
+        <div class="card">Google Maps Integration</div>
+        <div class="card">Social Media Integration</div>
     </div>
+
+    <a href="#contact" class="cta">Choose Premium Package</a>
 </section>
 
-<section id="gallery">
-    <h2>Cafe Gallery</h2>
+<section>
+    <h2>Sample Cafe Gallery</h2>
     <div class="gallery">
         <img src="coffee1.jpg">
         <img src="coffee2.jpg">
@@ -181,23 +222,24 @@ footer{
 
 <section id="map">
     <h2>Business Location (Sample)</h2>
-<iframe 
-src="https://www.google.com/maps?q=Addis%20Ababa%20Ethiopia&output=embed"
-width="100%" height="300" style="border:0;" allowfullscreen>
-</iframe>
-
+    <iframe 
+        src="https://www.google.com/maps?q=Addis%20Ababa%20Ethiopia&output=embed"
+        width="100%" height="320" style="border:0;" allowfullscreen>
+    </iframe>
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
-    <p>📞 +251 900 000 000</p>
-    <p>📧 cafe.business@gmail.com</p>
+    <p>📞 +251 925 325 102</p>
+
+    <a href="https://wa.me/251925325102" target="_blank" class="whatsapp">
+        💬 Order Premium via WhatsApp
+    </a>
 </section>
 
 <footer>
-    &copy; 2026 Premium Cafe Package
+    © 2026 Nathan Web Development
 </footer>
 
 </body>
 </html>
-
